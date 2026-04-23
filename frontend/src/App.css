@@ -1,0 +1,268 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-header {
+  background: #1a1a2e;
+  color: white;
+  padding: 0 24px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  font-size: 28px;
+}
+
+.app-header h1 {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.tab-nav {
+  background: white;
+  display: flex;
+  border-bottom: 2px solid #e0e4ef;
+  padding: 0 24px;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  padding: 14px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #666;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.tab-btn:hover {
+  color: #1a1a2e;
+}
+
+.tab-btn.active {
+  color: #4f6ef7;
+  border-bottom-color: #4f6ef7;
+}
+
+.app-main {
+  flex: 1;
+  padding: 28px 24px;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 24px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #1a1a2e;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #555;
+}
+
+input,
+select {
+  padding: 9px 12px;
+  border: 1px solid #d1d9e6;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #1a1a2e;
+  background: #fafbfc;
+  transition: border-color 0.15s;
+  width: 100%;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #4f6ef7;
+  background: white;
+}
+
+.radio-group {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 4px 0;
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  font-weight: 400;
+  color: #1a1a2e;
+}
+
+.btn-primary {
+  background: #4f6ef7;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+  margin-top: 8px;
+}
+
+.btn-primary:hover {
+  background: #3a57e8;
+}
+
+.btn-primary:disabled {
+  background: #a0aec0;
+  cursor: not-allowed;
+}
+
+.error-box {
+  background: #fff5f5;
+  border: 1px solid #feb2b2;
+  border-radius: 6px;
+  padding: 12px 16px;
+  margin-top: 16px;
+  color: #c53030;
+  font-size: 14px;
+}
+
+.result-box {
+  background: #f0f4ff;
+  border: 1px solid #c3d0fb;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.result-box h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #4f6ef7;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.result-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.result-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.result-label {
+  font-size: 12px;
+  color: #666;
+  font-weight: 500;
+}
+
+.result-value {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a1a2e;
+}
+
+.result-unit {
+  font-size: 12px;
+  color: #888;
+  margin-left: 2px;
+}
+
+.divider {
+  height: 1px;
+  background: #e0e4ef;
+  margin: 24px 0;
+}
+
+.map-container {
+  height: 420px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 20px;
+  border: 1px solid #d1d9e6;
+}
+
+.trajectory-info {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+.info-chip {
+  background: #f0f4ff;
+  border: 1px solid #c3d0fb;
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 13px;
+  color: #1a1a2e;
+}
+
+.info-chip strong {
+  color: #4f6ef7;
+}
+
+.spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
