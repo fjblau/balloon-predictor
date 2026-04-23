@@ -34,7 +34,6 @@ class TawhiriClient:
             "burst_altitude": params.burst_alt_m,
             "descent_rate": params.descent_rate_mps,
             "profile": "standard_profile",
-            "dataset": params.model,
         }
         r = await self._client.get(self.base_url, params=payload)
         r.raise_for_status()
