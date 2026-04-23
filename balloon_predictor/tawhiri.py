@@ -27,7 +27,7 @@ class TawhiriClient:
     async def predict(self, params: LaunchParams) -> Trajectory:
         payload = {
             "launch_latitude": params.launch_lat,
-            "launch_longitude": params.launch_lon % 360,
+            "launch_longitude": params.launch_lon,
             "launch_altitude": params.launch_alt_m,
             "launch_datetime": params.launch_time.isoformat(),
             "ascent_rate": params.ascent_rate_mps,
